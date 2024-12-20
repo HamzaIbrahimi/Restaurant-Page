@@ -9,3 +9,21 @@
     font-size: 12px;
 }
 
+body {
+    min-height: 100vh;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    
+}
+#navbar > * {
+   
+    cursor: pointer;
+}
+
+#navbar > *:hover {
+    transform: scale(1.1);   
+}
