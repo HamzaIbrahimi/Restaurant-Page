@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Doodle_Font";
+    src: url("../fonts/RubikDoodleShadow-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto" ;
+    src: url("../fonts/Roboto-Black.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,25 +14,74 @@
 }
 
 :root {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 12px;
+    --font-root: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-header: "Doodle_Font";
+    --font-roboto: "Roboto";
+    --base_font_size: 16px;
 }
 
 body {
     min-height: 100vh;
+    background-color: gold;
+    font-family: var(--font-root);
+    font-size: var(--base_font_size);
+}
+                    /* ----- Header -----*/
+.header_container {
+    padding: 10px 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 60px;
+    gap: 30px;  
+    font-size: xx-large;   
+    font-family: var(--font-header);
+    text-transform: uppercase;  
+}
+
+#title {
+    justify-self: center;
+}
+
+ #burger {
+    font-weight: 700;
+    font-size: 50px; 
+    font-family: var(--font-roboto); 
+    justify-self: center;
 }
 
 #navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-self: end;
+    gap: 60px;
+    font-family: var(--font-roboto);
     padding: 20px;
-    
+    color: black;   
 }
+
 #navbar > * {
-   
+    /* box-shadow: inset 0 0 0 0 gold; */
+    font-size: x-large;
+    font-weight: 200;
+    letter-spacing: 3px;
+    padding: 3px 10px;
+    transition:all 500ms ease;
+}
+
+button  {  
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#navbar #order {
+    border: 3px solid black;
+    /* padding: 5px 15px; */
 }
 
 #navbar > *:hover {
-    transform: scale(1.1);   
+    box-shadow: inset 200px 0 0 0 #000;
+    color: gold;
+    transition: 500ms ease;     
 }
