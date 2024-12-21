@@ -33,8 +33,8 @@ body {
     align-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 60px 60px;
-    gap: 30px;  
-    font-size: xx-large;   
+    gap: 10px;  
+    font-size: x-large;   
     font-family: var(--font-header);
     text-transform: uppercase;  
 }
@@ -45,7 +45,7 @@ body {
 
  #burger {
     font-weight: 700;
-    font-size: 50px; 
+    font-size: 30px; 
     font-family: var(--font-roboto); 
     justify-self: center;
 }
@@ -54,15 +54,14 @@ body {
     display: flex;
     justify-content: center;
     align-self: end;
-    gap: 60px;
+    gap: 30px;
     font-family: var(--font-roboto);
     padding: 20px;
     color: black;   
 }
 
 #navbar > * {
-    /* box-shadow: inset 0 0 0 0 gold; */
-    font-size: x-large;
+    font-size: large;
     font-weight: 200;
     letter-spacing: 3px;
     padding: 3px 10px;
@@ -77,11 +76,52 @@ button  {
 
 #navbar #order {
     border: 3px solid black;
-    /* padding: 5px 15px; */
+    padding: 5px 15px;
 }
 
 #navbar > *:hover {
-    box-shadow: inset 200px 0 0 0 #000;
+    box-shadow: inset 210px 0 0 0 #000;
     color: gold;
     transition: 500ms ease;     
+}
+                    /* ----- hero image ----- */
+#hero_container {
+    position: relative;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero_image {
+    width: 100%;
+    height: 400px;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: 0 65% ;   
+}
+
+#img_text {
+    position: absolute;
+    top: 20%;
+    font-size: xx-large;
+}
+
+#extra_img_text {
+    position: absolute;
+    top: 50%;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+ #img_text, #extra_img_text {
+    color: #fff;
+    font-family: var(--font-roboto);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    
 }
