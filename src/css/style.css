@@ -131,8 +131,7 @@ button:hover {
     text-transform: uppercase;
     padding: 10px 20px;
     letter-spacing: 1px;
-    word-wrap: break-word;
-    
+    word-wrap: break-word;  
 }
 
                     /* ----- Special Items Grid ----- */

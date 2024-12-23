@@ -38,27 +38,26 @@ const appendChildren = (container, ...args) => {
 function renderGridSpecial(div) {
   const containerGrid = renderDiv("special_items_grid");
   const gridFirstChild = renderDiv("hotdog_grid");
-  const hotdogImage = renderImage("hotdog", hotDog);
-  const titleDivOne = renderDiv("", "Our Special Hotdogs");
   const hotdogText =
     "Not a burger fan? No worries, we've got sizzling hotdogs just for you!";
-  const textDiv = renderDiv("", hotdogText);
-  const btn = renderButton("See the specials");
-  appendChildren(gridFirstChild, hotdogImage, titleDivOne, textDiv, btn);
-  const smashBurgerImage = renderImage("smashBurger", smashBurger);
-  const titleDivTwo = renderDiv("", "Our Special Smash Burger");
   const smashBurgerText =
-    "Meet the crowd favorite: our juicy, crispy-edged Smash Burger – a flavor-packed classic!";
-  const textDivSmashBurger = renderDiv("", smashBurgerText);
-  const btnBurger = renderButton("Order NOW!");
+    "Crowd favorite: our juicy, crispy-edged Smash Burger – a flavor-packed classic!";
+  const gridFirstChildElements = [
+    renderImage("hotdog", hotDog),
+    renderDiv("", "Our Special Hotdogs"),
+    renderDiv("", hotdogText),
+    renderButton("See the specials"),
+  ];
+  appendChildren(gridFirstChild, ...gridFirstChildElements);
+
   const gridSecondChild = renderDiv("smashBurger_grid");
-  appendChildren(
-    gridSecondChild,
-    smashBurgerImage,
-    titleDivTwo,
-    textDivSmashBurger,
-    btnBurger
-  );
+  const gridSecondChildElements = [
+    renderImage("smashBurger", smashBurger),
+    renderDiv("", "Our Special Smash Burger"),
+    renderDiv("", smashBurgerText),
+    renderButton("Order NOW!"),
+  ];
+  appendChildren(gridSecondChild, ...gridSecondChildElements);
   appendChildren(containerGrid, gridFirstChild, gridSecondChild);
   div.appendChild(containerGrid);
 }
@@ -85,10 +84,12 @@ export function renderFooter(div) {
 }
 export function appendHomePage(div) {
   const imgContainer = renderDiv("hero_container");
-  const imgText = renderDiv("img_text", imgInformation);
-  const extraImgText = renderDiv("extra_img_text", imgExtraInformation);
-  const img = renderImage("hero_image", mainBurger);
-  appendChildren(imgContainer, img, imgText, extraImgText);
+  const fullHomePage = [
+    renderImage("hero_image", mainBurger),
+    renderDiv("img_text", imgInformation),
+    renderDiv("extra_img_text", imgExtraInformation),
+  ];
+  appendChildren(imgContainer, ...fullHomePage);
   div.appendChild(imgContainer);
   renderGridSpecial(div);
   renderFooter(div);
