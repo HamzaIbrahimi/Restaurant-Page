@@ -72,11 +72,19 @@ button  {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    padding: 5px 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+button:hover {
+    color: gold;
+    background-color: #000;
 }
 
 #navbar #order {
     border: 3px solid black;
-    padding: 5px 15px;
+    padding: 5px 10px;
 }
 
 #navbar > *:hover {
@@ -88,10 +96,11 @@ button  {
 #hero_container {
     position: relative;
     background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+#hero_container > div {
+    margin: 0 100px;
+    min-width: 500px;
 }
 
 #hero_image {
@@ -112,7 +121,7 @@ button  {
     position: absolute;
     top: 50%;
     opacity: 0.8;
-    margin-top: 10px;
+    
 }
 
  #img_text, #extra_img_text {
@@ -125,3 +134,33 @@ button  {
     word-wrap: break-word;
     
 }
+
+                    /* ----- Special Items Grid ----- */
+#special_items_grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+#special_items_grid img {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30%;
+}
+
+#special_items_grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#special_items_grid > div > div:nth-child(2) {
+    font-size: 30px;
+    font-weight: 700;
+}
+
