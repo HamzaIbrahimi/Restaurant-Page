@@ -170,8 +170,8 @@ button:hover {
                     /* ---- Footer Container ----- */
 #footer_container {
     display: flex;
-    justify-content: space-around;
-    align-items: start;
+    flex-direction: column-reverse;
+    align-items: center;
     flex-wrap: wrap;
     background: #000;
     font-family: var(--font-roboto);
