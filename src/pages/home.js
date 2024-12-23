@@ -1,6 +1,8 @@
 import mainBurger from "../images/mae-mu-I7A_pHLcQK8-unsplash.jpg";
 import hotDog from "../images/hotdogs.jpg";
 import smashBurger from "../images/smash_burger.jpg";
+import instaIcon from "../images/insta_icon.png";
+import fbIcon from "../images/fb_icon.png";
 
 let imgInformation =
   "Indulge in the perfect burger experience - crafted just for you!";
@@ -24,7 +26,6 @@ export function renderDiv(id = "", text = "") {
 function renderButton(text) {
   const btn = document.createElement("button");
   btn.textContent = text;
-  btn.style.border = `3px solid black`;
   return btn;
 }
 
@@ -62,6 +63,26 @@ function renderGridSpecial(div) {
   div.appendChild(containerGrid);
 }
 
+export function renderFooter(div) {
+  const footerContainer = renderDiv("footer_container");
+  const iconContainer = renderDiv("icons");
+  const images = [renderImage("fb", fbIcon), renderImage("insta", instaIcon)];
+  appendChildren(iconContainer, ...images);
+  const footerNavigationContainer = renderDiv("footer_buttons");
+  const allButtons = [
+    renderButton("About"),
+    renderButton("Contact"),
+    renderButton("Location"),
+    renderButton("Awards"),
+    renderButton("Careers"),
+    renderButton("Terms"),
+    renderButton("Privacy"),
+    renderButton("Email Signup"),
+  ];
+  appendChildren(footerNavigationContainer, ...allButtons);
+  appendChildren(footerContainer, iconContainer, footerNavigationContainer);
+  div.appendChild(footerContainer);
+}
 export function appendHomePage(div) {
   const imgContainer = renderDiv("hero_container");
   const imgText = renderDiv("img_text", imgInformation);
@@ -70,4 +91,5 @@ export function appendHomePage(div) {
   appendChildren(imgContainer, img, imgText, extraImgText);
   div.appendChild(imgContainer);
   renderGridSpecial(div);
+  renderFooter(div);
 }
