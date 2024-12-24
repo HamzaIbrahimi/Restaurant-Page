@@ -25,6 +25,8 @@ body {
     background-color: gold;
     font-family: var(--font-root);
     font-size: var(--base_font_size);
+    display: flex;
+    flex-direction: column;
 }
                     /* ----- Header -----*/
 .header_container {
@@ -65,7 +67,7 @@ body {
     font-weight: 200;
     letter-spacing: 3px;
     padding: 3px 10px;
-    transition:all 500ms ease;
+    transition:all 600ms ease;
 }
 
 button  {  
@@ -137,11 +139,11 @@ button:hover {
 
                     /* ----- Special Items Grid ----- */
 #special_items_grid {
-    margin-top: 10px;
+    margin: 20px 0;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 0;
     
 }
 
@@ -176,7 +178,8 @@ button:hover {
     flex-wrap: wrap;
     background: #000;
     font-family: var(--font-roboto);
-    padding: 30px 0;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 #footer_container button {
@@ -217,7 +220,7 @@ button:hover {
 }
 
 #about_title {
-    font-weight: 600;
+    font-weight: 800;
     font-size: x-large;
 }
 
@@ -254,4 +257,53 @@ button:hover {
 }
 
                     /* ----- Menu Page ----- */
+
+#menu_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}  
+
+#menu_title {
+    font-family: var(--font-header);
+    font-size: xxx-large;
+    text-decoration: overline;
+}
+#menu_container img {
+    width: 400px;
+    height: 200px;
+    border: 4px solid black;
+    border-radius: 10px 20px;
+}
+#menu_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    place-content: center;
+    width: 100%;
+    gap: 30px;
+    font-family: var(--font-roboto);
+}
+#menu_grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#menu_grid > div > div:nth-child(2) {
+    font-size: large;
+}
+
+#menu_grid > div > div:nth-child(3) {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+#menu_grid > div > div:nth-child(4) {
+    font-weight: 900;
+    font-family: var(--font-header);
+}
 
