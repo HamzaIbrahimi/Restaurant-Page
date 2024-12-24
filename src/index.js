@@ -3,6 +3,7 @@ import "./css/style.css";
 
 import { appendHomePage } from "./pages/home.js";
 import { appendAboutPage } from "./pages/about.js";
+import { appendMenuPage } from "./pages/menu.js";
 const mainContainer = document.querySelector("#content");
 appendHomePage(mainContainer);
 
@@ -30,4 +31,9 @@ mainButtons[1].addEventListener("click", () => {
   appendAboutPage(mainContainer);
   mainButtons[1].style.textDecoration = "overline";
 });
-mainButtons[2].addEventListener("click", () => {});
+
+mainButtons[2].addEventListener("click", () => {
+  cleanUp();
+  appendMenuPage(mainContainer);
+  mainButtons[2].style.textDecoration = "overline";
+});
