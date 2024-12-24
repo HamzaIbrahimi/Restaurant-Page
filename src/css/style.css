@@ -221,6 +221,37 @@ button:hover {
     font-size: x-large;
 }
 
-#about_container > div {
-    margin: 0 200px;
+#img_open_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
 }
+
+#openHours {
+    font-family: var(--font-header);
+    color: black;
+    font-size: xx-large;
+}
+
+#location {
+    font-family: var(--font-roboto);
+    text-transform: uppercase;
+    font-size: large;
+}
+
+#about_image {
+    height: 300px;
+    width: 800px;
+    border-radius: 30px;
+    border: 2px solid black;
+    
+}
+
+#about_container > div {
+    margin: 0 120px;
+}
+
+                    /* ----- Menu Page ----- */
+
