@@ -29,7 +29,7 @@ function renderButton(text) {
   return btn;
 }
 
-const appendChildren = (container, ...args) => {
+export const appendChildren = (container, ...args) => {
   for (const elem of args) {
     container.appendChild(elem);
   }
