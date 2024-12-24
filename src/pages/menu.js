@@ -19,7 +19,7 @@ const chickenBurgerDescription =
 const hotdogsDescription =
   "Classic, juicy hotdogs with your favorite toppings.";
 const healthyBurgerDescription =
-  "A wholesome, guilt-free burger packed with fresh and nutritious ingredients.";
+  "A wholesome, guilt-free burger with fresh ingredients.";
 
 function gridItem(image, title, description, price, div) {
   const elems = [
