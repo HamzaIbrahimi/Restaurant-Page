@@ -4,9 +4,9 @@ import smashBurger from "../images/smash_burger.jpg";
 import instaIcon from "../images/insta_icon.png";
 import fbIcon from "../images/fb_icon.png";
 
-let imgInformation =
+const imgInformation =
   "Indulge in the perfect burger experience - crafted just for you!";
-let imgExtraInformation =
+const imgExtraInformation =
   "Treat yourself to the ultimate burger experience - made with fresh, flavorful ingredients and crafted to perfection. Each bite is a burst of taste that will leave you craving for more!";
 
 export function renderImage(id, imgSrc) {
